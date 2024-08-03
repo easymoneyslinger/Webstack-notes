@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webstack-Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #F0EBE3;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #D8EFD3;
+            color: #55AD9B;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #55AD9B 3px solid;
+        }
+        header h1 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #55AD9B;
+            background:#F7F9F2;
+        }
+        section h2, section h3, section h4 {
+            color: #55AD9B;
+        }
+        section p {
+            margin-bottom: 10px;
+        }
+        .note {
+            background: #D8EFD3;
+            padding: 10px;
+            border-left: 6px solid #55AD9B;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>WebStack Fundamentals</h1>
+        </div>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Part-1: Introduction</h2>
+            <h3>What is a Network & Internet?</h3>
+            <p>A network consists of two or more computers that are linked in order to share resources (such as printers and CDs), exchange files, or allow electronic communications.</p>
+            <p>The Internet is a global network of interconnected computers and devices that enables communication and data exchange across the globe. It serves as the backbone for transmitting information, supporting various online services, and facilitating real-time interactions.</p>
+            <div class="note">
+                <h3>Note:</h3>
+                <p>The computers on a network may be linked through cables, telephone lines, radio waves, satellites, or infrared light beams.</p>
+            </div>
+            <p>Two very common types of networks include:</p>
+            <ul>
+                <li>Local Area Network (LAN)</li>
+                <li>Wide Area Network (WAN)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Part-2: Network Architecture</h2>
+            <p><strong>Peer-to-Peer (P2P):</strong> Involves distributed systems communicating and sharing resources without a central authority.</p>
+            <p><strong>Service-Oriented Architecture (SOA):</strong> Focuses on reusable services that can be combined to form applications.</p>
+            <p><strong>Microservices Architecture:</strong> Breaks down applications into independently deployable services.</p>
+            <p><strong><i>Client-Server Architecture:</strong> A distributed computing model where tasks are divided between service providers (servers) and service requesters (clients).</i></p>
+            <div class="note">
+                <h3>Client-Server Architecture Functionality</h3>
+                <p>Clients initiate communication sessions with servers, send requests, and wait for responses. Servers wait for client requests, process these requests, and send back appropriate responses.</p>
+            </div>
+            <h3>Advantages of Client-Server Architecture</h3>
+            <ul>
+                <li><strong>Scalability:</strong> Servers can be upgraded or replicated to handle more clients.</li>
+                <li><strong>Maintainability:</strong> Centralized management of resources and services makes maintenance easier.</li>
+                <li><strong>Security:</strong> Centralized control allows for better implementation of security measures.</li>
+                <li><strong>Resource Sharing:</strong> Efficient use of resources as multiple clients can share the same server resources.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Part-3: Communication Methods & Protocols</h2>
+            <p>Client-server communication is typically facilitated by various network protocols such as HTTP (for web services), FTP (for file transfer), SMTP (for email), and SQL (for database access).</p>
+            <div class="note">
+                <h3>HTTP</h3>
+                <p>HTTP (Hypertext Transfer Protocol) is the foundational protocol used on the World Wide Web for transmitting data between a client (typically a web browser) and a server.</p>
+                <h4>Requests and Responses:</h4>
+                <p><strong>HTTP Request:</strong> Sent by the client to request data or perform an action on the server. It includes methods (GET, POST, PUT, DELETE, etc.), headers, and sometimes a body.</p>
+                <p><strong>HTTP Response:</strong> Sent by the server in reply to the client's request. It includes status codes, headers, and often a body containing the requested data.</p>
+            </div>
+            <div class="note">
+                <h3>HTTP Methods</h3>
+                <ul>
+                    <li><strong>GET:</strong> Retrieves data from the server without causing any side-effects.</li>
+                    <li><strong>POST:</strong> Submits data to be processed to a specified resource.</li>
+                    <li><strong>PUT:</strong> Updates a resource on the server with new data or creates a new one.</li>
+                    <li><strong>DELETE:</strong> Removes the specified resource from the server.</li>
+                    <li><strong>HEAD:</strong> Retrieves only the headers, not the body of the response.</li>
+                    <li><strong>OPTIONS:</strong> Returns the HTTP methods that the server supports for a specific resource.</li>
+                    <li><strong>PATCH:</strong> Applies partial modifications to a resource.</li>
+                </ul>
+            </div>
+            <div class="note">
+                <h3>HTTP Status Codes</h3>
+                <p>HTTP status codes are issued by the server in response to a client's request. They are divided into five categories:</p>
+                <ul>
+                    <li><strong>1xx (Informational):</strong> 100 Continue, 101 Switching Protocols</li>
+                    <li><strong>2xx (Success):</strong> 200 OK, 201 Created, 204 No Content</li>
+                    <li><strong>3xx (Redirection):</strong> 301 Moved Permanently, 302 Found, 304 Not Modified</li>
+                    <li><strong>4xx (Client Error):</strong> 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found</li>
+                    <li><strong>5xx (Server Error):</strong> 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>Part-4: SSL (Secure Sockets Layer)</h2>
+            <p>SSL (Secure Sockets Layer) is a standard security technology for establishing an encrypted link between a web server and a web browser. It ensures that all data passed between the web server and browsers remain private and integral. SSL has been succeeded by Transport Layer Security (TLS), but the term SSL is still commonly used.</p>
+            <div class="note">
+                <h3>How SSL Works</h3>
+                <ol>
+                    <li><strong>Client Hello:</strong> The client sends a message to the server with its SSL version, cipher settings, session-specific data, and other information necessary for establishing a connection.</li>
+                    <li><strong>Server Hello:</strong> The server responds with its SSL version, cipher settings, session-specific data, and its SSL certificate.</li>
+                    <li><strong>Certificate Validation:</strong> The client verifies the server’s SSL certificate with a trusted Certificate Authority (CA).</li>
+                    <li><strong>Key Exchange:</strong> The client generates a session key, encrypts it with the server's public key, and sends it to the server.</li>
+                    <li><strong>Secure Connection:</strong> Once the handshake is complete, a secure, encrypted connection is established.</li>
+                </ol>
+            </div>
+            <h3>Key Features of SSL</h3>
+            <ul>
+                <li><strong>Encryption:</strong> SSL uses encryption to protect data in transit between the client and server.</li>
+                <li><strong>Authentication:</strong> SSL certificates verify the identity of the server.</li>
+                <li><strong>Data Integrity:</strong> SSL ensures that data sent between the client and server is not tampered with during transit.</li>
+            </ul>
+            <h3>SSL Certificates</h3>
+            <h4>Types of SSL Certificates:</h4>
+            <ul>
+                <li><strong>Domain Validated (DV):</strong> Basic level of validation, ensuring the domain is registered.</li>
+                <li><strong>Organization Validated (OV):</strong> More rigorous validation process, including verifying the organization's identity.</li>
+                </ul>
+                </section>
+                </div>
+                </body>
+                </html>
+                
